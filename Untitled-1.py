@@ -4,7 +4,6 @@ import cv2
 import numpy as np
 import pyautogui
 import pygetwindow as gw
-
 import vgamepad as vg
 
 gameWindow = gw.getWindowsWithTitle("Honkai: Star Rail")[0]
@@ -65,7 +64,7 @@ def combat():
 
         cv2.imshow("title", screenshot)
 
-        menu = pyautogui.locateOnScreen('menu.png', confidence=0.85)
+        menu = pyautogui.locateOnScreen("menu.png", confidence=0.85)
         if menu:
             cv2.destroyAllWindows()
             break
@@ -195,16 +194,16 @@ def spaceStation():
 
 
 def jarilo():
-    press(MAP)
-    time.sleep(LOAD_TIME)
-    press(X)
-    time.sleep(LOAD_TIME)
-    move(7000, 20000, 0.2)
-    press(A)
-    time.sleep(LOAD_TIME)
-    press(DOWN)
-    move(32767, -2000, 0.47)
-    press(A)
+    # press(MAP)
+    # time.sleep(LOAD_TIME)
+    # press(X)
+    # time.sleep(LOAD_TIME)
+    # move(7000, 20000, 0.2)
+    # press(A)
+    # time.sleep(LOAD_TIME)
+    # press(DOWN)
+    # move(32767, -2000, 0.47)
+    # press(A)
     # time.sleep(LOAD_TIME)
     # move(-32767, -24000, 6.5)
     # press(X)
@@ -263,6 +262,10 @@ def jarilo():
     # press(MAP)
     # move(-32767, -9000, 0.6)
     # press(A)
+    move(0, -32767, 5.5)
+    move(-32767, 0, 6.4)
+    press(X)
+    combat()
 
 
 # spaceStation()
