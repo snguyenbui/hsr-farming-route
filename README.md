@@ -2,5 +2,5 @@
 Python script to farm all the mobs
 
 Notes
-Must not start script while on Space Station
-Must set game to windowed mode
+- Must not start script while on Space Station
+- Must set game to windowed mode
