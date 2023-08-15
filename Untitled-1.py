@@ -58,7 +58,7 @@ def combat():
 
         cv2.imshow("title", screenshot)
 
-        menu = pyautogui.locateOnScreen("menu.png", confidence=0.52)
+        menu = pyautogui.locateOnScreen("menu.png", confidence=0.51)
 
         if cv2.pollKey() != -1 or menu:
             cv2.destroyAllWindows()
@@ -161,9 +161,9 @@ def spaceStation():
     move(-32767, -7000, 3.3)
     combat()
 
-    # ##############
+    ###############
     # Supply Zone #
-    # ##############
+    ###############
 
     press(MAP)
     time.sleep(LOAD_TIME)
@@ -223,6 +223,7 @@ def jarilo():
     ########################
     # Outlying Snow Plains #
     ########################
+
     press(MAP)
     time.sleep(LOAD_TIME)
     press(X)
@@ -234,14 +235,15 @@ def jarilo():
     move(32767, -2000, 0.47)
     press(A)
     time.sleep(LOAD_TIME)
-    move(-32767, -24000, 5.5)
+    move(-32767, -24000, 5.3)
     combat()
 
     press(MAP)
     time.sleep(LOAD_TIME)
-    move(-15000, 32767, 0.3)
+    move(-12000, 32767, 0.3)
     press(A)
-    move(-32767, -9000, 8.5)
+    time.sleep(LOAD_TIME)
+    move(-32767, -9000, 8.0)
     combat()
 
     press(MAP)
@@ -251,8 +253,7 @@ def jarilo():
     move(-32767, -10000, 14.2)
     combat()
 
-    # rework needed
-    move(32767, -5000, 5.3)
+    move(32767, -5000, 5.4)
     combat()
 
     ##################
@@ -273,8 +274,10 @@ def jarilo():
     combat()
 
     press(MAP)
+    time.sleep(LOAD_TIME)
     move(-4000, -32767, 0.45)
     press(A)
+    time.sleep(LOAD_TIME)
     move(-32767, 3500, 6.4)
     combat()
 
@@ -282,9 +285,12 @@ def jarilo():
     time.sleep(LOAD_TIME)
     move(-6000, -32767, 0.35)
     press(A)
+    time.sleep(LOAD_TIME)
     move(0, -32767, 6.0)
-    move(32767, -32767, 5.0)
+    move(32767, -32767, 4.7)
     combat()
+
+    # # # # MOB HERE
 
     press(MAP)
     time.sleep(LOAD_TIME)
@@ -330,8 +336,9 @@ def jarilo():
 
     press(MAP)
     time.sleep(LOAD_TIME)
-    move(-32767, -2000, 0.1)
+    move(-32767, -2000, 0.13)
     press(A)
+    time.sleep(LOAD_TIME)
     move(0, -32767, 1.1)
     move(-32767, 0, 10.4)
     move(-32767, 32767, 1.5)
@@ -350,7 +357,7 @@ def jarilo():
     move(-11000, -32767, 0.92)
     press(A)
     time.sleep(LOAD_TIME)
-    move(14000, 32767, 4.7)
+    move(14000, 32767, 4.9)
     combat()
 
     press(MAP)
@@ -359,8 +366,22 @@ def jarilo():
     press(A)
     time.sleep(LOAD_TIME)
     move(0, -32767, 4.9)
+    move(-32767, 0, 1.1)
+    combat()
+    move(-32767, 0, 1.1)
+    combat()
+    move(-32767, 0, 1.1)
+    combat()
+    move(-32767, 0, 1.1)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(20000, -10000, 0.25)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(0, -32767, 4.9)
     move(-32767, 0, 3.1)
-    # mob here too
     move(0, -32767, 6.0)
     combat()
 
@@ -374,7 +395,19 @@ def jarilo():
     move(0, -32767, 8.0)
     move(32767, 0, 0.3)
     move(0, -32767, 4.3)
-    move(32767, 0, 6.3)
+    move(32767, 0, 2.1)
+    combat()
+    move(32767, 0, 2.1)
+    combat()
+    move(32767, 0, 2.1)
+    combat()
+    move(32767, 32767, 1.0)
+    combat()
+    move(32767, 32767, 1.0)
+    combat()
+    move(0, 32767, 1.0)
+    combat()
+    move(0, 32767, 1.0)
     combat()
 
     ###################
@@ -384,10 +417,10 @@ def jarilo():
     press(MAP)
     time.sleep(LOAD_TIME)
     press(DOWN)
-    move(-10000, -10000, 0.2)
+    move(-10000, -10000, 0.22)
     press(A)
     time.sleep(LOAD_TIME)
-    move(-32767, -7500, 6.0)
+    move(-32767, -7500, 6.1)
     combat()
 
     move(0, 32767, 2.2)
@@ -406,11 +439,24 @@ def jarilo():
     move(-32767, 0, 8.0)
     combat()
 
-    # one more mob here to do
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, -32767, 0.23)
+    press(A)
+    press(A)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(0, 32767, 7.0)
+    move(-32767, 0, 8.0)
+    move(-32767, 4000, 2.0)
+    combat()
+    move(-32767, 7000, 2.0)
+    combat()
 
     ##############
     # Great Mine #
     ##############
+
     press(MAP)
     time.sleep(LOAD_TIME)
     press(DOWN)
@@ -424,7 +470,6 @@ def jarilo():
     move(-32767, -5000, 3.0)
     combat()
 
-    # needs another tuning
     move(-32767, 0, 2)
     move(18000, 32767, 3.2)
     move(32767, 20000, 5.0)
@@ -437,8 +482,11 @@ def jarilo():
     press(A)
     time.sleep(LOAD_TIME)
     move(32767, -32767, 3.0)
-    # redo this without getting ambushed by roamer
-    move(32767, 0, 3.0)
+    move(32767, 0, 1.0)
+    combat()
+    move(32767, 0, 1.0)
+    combat()
+    move(32767, 0, 1.0)
     combat()
 
     press(MAP)
@@ -460,8 +508,16 @@ def jarilo():
     move(32767, 28000, 1.5)
     combat()
 
-    # tuning needed
-    move(-20000, 32767, 3.0)
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, 0, 0.1)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, 0, 6.0)
+    move(32767, 28000, 1.5)
+    move(0, 32767, 4.0)
+    move(32767, 0, 1.0)
+    combat()
     move(32767, 0, 1.0)
     combat()
 
@@ -474,8 +530,18 @@ def jarilo():
     move(-32767, -10000, 6.0)
     combat()
 
-    # roamer + redo cuz ambush
-    move(-32767, 3000, 2.0)
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(10000, 0, 0.2)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, 20000, 2.0)
+    move(-32767, -10000, 6.0)
+    move(0, 32767, 1.0)
+    combat()
+    move(0, 32767, 1.0)
+    combat()
+    move(0, 32767, 1.0)
     combat()
 
     press(MAP)
@@ -514,6 +580,26 @@ def jarilo():
     move(-32767, 3000, 1.8)
     move(0, 32767, 3.0)
     combat()
+    move(0, 32767, 1.0)
+    combat()
+    move(0, 32767, 1.0)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, 32767, 0.2)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(0, -32767, 1.2)
+    move(32767, 0, 1.8)
+    move(0, -32767, 1.6)
+    move(32767, -32767, 1.2)
+    move(32767, 0, 2.7)
+    move(32767, 32767, 1.2)
+    combat()
+    move(32767, 32767, 1.2)
+    combat()
+    move(32767, 32767, 1.2)
     combat()
 
     press(MAP)
@@ -528,7 +614,6 @@ def jarilo():
     move(32767, 0, 2.7)
     move(32767, 32767, 5.5)
     combat()
-    # to-do roamer pathing
 
     ####################
     # Robot Settlement #
@@ -566,13 +651,29 @@ def jarilo():
     press(X)
     combat()
 
-    move(0, -32767, 1.2)
-    move(-32767, -28000, 3.0)
-    move(-32767, 0, 1.0)
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, -6000, 0.25)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, -15000, 3.0)
+    move(-7000, -32767, 7.0)
+    move(-10000, -32767, 10.0)
+    move(32767, -24000, 2.0)
+    move(32767, 0, 0.3)
     combat()
 
-    move(-32767, 0, 1.6)
-    move(-6000, -32767, 2.2)
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, -11000, 0.27)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, -15000, 3.0)
+    move(-7000, -32767, 7.0)
+    move(-10000, -32767, 10.0)
+    move(32767, -24000, 2.0)
+    move(32767, 0, 2.2)
+    move(0, 32767, 1.4)
     combat()
 
 
@@ -580,10 +681,11 @@ def xianzhou():
     #############
     # Cloudford #
     #############
+
     press(MAP)
 
 
-spaceStation()
+# spaceStation()
 # jarilo()
 # xianzhou()
 
