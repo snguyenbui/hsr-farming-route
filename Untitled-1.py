@@ -12,7 +12,7 @@ gameWindow.activate()
 gamepad = vg.VX360Gamepad()
 
 INPUT_BUFFER = 0.2
-LOAD_TIME = 2.7
+LOAD_TIME = 2.3
 
 LEFT = vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT
 RIGHT = vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT
@@ -58,7 +58,7 @@ def combat():
 
         cv2.imshow("title", screenshot)
 
-        menu = pyautogui.locateOnScreen("menu.png", confidence=0.85)
+        menu = pyautogui.locateOnScreen("menu.png", confidence=0.52)
 
         if cv2.pollKey() != -1 or menu:
             cv2.destroyAllWindows()
@@ -81,7 +81,7 @@ def spaceStation():
     move(5500, 32767, 0.55)
     press(A)
     time.sleep(LOAD_TIME)
-    move(0, -32767, 3.8)
+    move(0, -32767, 4.4)
     combat()
 
     ################
@@ -97,10 +97,16 @@ def spaceStation():
     move(0, -32767, 6.1)
     combat()
 
-    move(32767, 0, 4.0)
-    move(7000, -32767, 6.0)
-    move(32767, 4000, 2.8)
-    move(-6000, 32767, 6.0)
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, 32767, 0.1)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(0, -32767, 6.1)
+    move(-32767, 0, 3.2)
+    move(0, 32767, 6.2)
+    move(-32767, 0, 1.7)
+    move(-7000, -32767, 5.5)
     combat()
 
     press(MAP)
@@ -112,17 +118,24 @@ def spaceStation():
     move(0, -32767, 1.0)
     combat()
 
-    move(-5000, 32767, 6.3)
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, -32767, 0.1)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-6500, 32767, 4.6)
     move(-32767, 0, 2.1)
     combat()
 
-    move(32767, -17000, 3.0)
-    move(32767, 20000, 2.0)
-    move(32767, 32767, 2.0)
-    move(6000, 32767, 5.2)
-    move(-32767, 16000, 1.5)
-    move(0, 32767, 1.9)
-    move(32767, -18000, 0.5)
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(32767, -4000, 0.5)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, -25000, 3.5)
+    move(-32767, 10000, 2.5)
+    move(-16000, 32767, 6.0)
+    move(32767, 20000, 1.0)
     combat()
 
     press(MAP)
@@ -133,17 +146,24 @@ def spaceStation():
     press(A)
     time.sleep(LOAD_TIME)
     move(9000, -32767, 3.0)
+    move(32767, 0, 0.5)
     combat()
 
-    # needs tuning
-    move(9000, -32767, 4.4)
-    move(-32767, 6500, 8.5)
-    move(0, 32767, 3.5)
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-28000, -23000, 0.05)
+    press(A)
+    press(A)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, -15000, 2.0)
+    move(-32767, 11000, 2.0)
+    move(-32767, -7000, 3.3)
     combat()
 
-    ###############
+    # ##############
     # Supply Zone #
-    ###############
+    # ##############
 
     press(MAP)
     time.sleep(LOAD_TIME)
@@ -181,7 +201,7 @@ def spaceStation():
 
     press(MAP)
     time.sleep(LOAD_TIME)
-    move(10000, 32767, 0.2)
+    move(9000, 32767, 0.22)
     press(A)
     time.sleep(LOAD_TIME)
     move(-32767, -32767, 6.7)
@@ -231,7 +251,7 @@ def jarilo():
     move(-32767, -10000, 14.2)
     combat()
 
-    rework needed
+    # rework needed
     move(32767, -5000, 5.3)
     combat()
 
@@ -404,7 +424,7 @@ def jarilo():
     move(-32767, -5000, 3.0)
     combat()
 
-    needs another tuning
+    # needs another tuning
     move(-32767, 0, 2)
     move(18000, 32767, 3.2)
     move(32767, 20000, 5.0)
@@ -417,7 +437,7 @@ def jarilo():
     press(A)
     time.sleep(LOAD_TIME)
     move(32767, -32767, 3.0)
-    redo this without getting ambushed by roamer
+    # redo this without getting ambushed by roamer
     move(32767, 0, 3.0)
     combat()
 
@@ -440,7 +460,7 @@ def jarilo():
     move(32767, 28000, 1.5)
     combat()
 
-    tuning needed
+    # tuning needed
     move(-20000, 32767, 3.0)
     move(32767, 0, 1.0)
     combat()
@@ -454,7 +474,7 @@ def jarilo():
     move(-32767, -10000, 6.0)
     combat()
 
-    roamer + redo cuz ambush
+    # roamer + redo cuz ambush
     move(-32767, 3000, 2.0)
     combat()
 
@@ -562,9 +582,10 @@ def xianzhou():
     #############
     press(MAP)
 
-# spaceStation()
+
+spaceStation()
 # jarilo()
-xianzhou()
+# xianzhou()
 
 
 # # reset gamepad to default state
