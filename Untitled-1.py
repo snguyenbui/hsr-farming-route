@@ -43,13 +43,8 @@ def move(x, y, duration):
     time.sleep(INPUT_BUFFER)
 
 
-def resetLeftStick():
-    gamepad.left_joystick(x_value=0, y_value=0)
-    gamepad.update()
-    time.sleep(INPUT_BUFFER)
-
-
 def combat():
+    press(X)
     while True:
         screenshot = pyautogui.screenshot(
             region=(
@@ -72,6 +67,10 @@ def combat():
 
 
 def spaceStation():
+    #############
+    # Base Zone #
+    #############
+
     press(MAP)
     time.sleep(LOAD_TIME)
     press(X)
@@ -83,8 +82,11 @@ def spaceStation():
     press(A)
     time.sleep(LOAD_TIME)
     move(0, -32767, 3.8)
-    press(X)
     combat()
+
+    ################
+    # Storage Zone #
+    ################
 
     press(MAP)
     time.sleep(LOAD_TIME)
@@ -93,14 +95,12 @@ def spaceStation():
     press(A)
     time.sleep(LOAD_TIME)
     move(0, -32767, 6.1)
-    press(X)
     combat()
 
     move(32767, 0, 4.0)
     move(7000, -32767, 6.0)
     move(32767, 4000, 2.8)
     move(-6000, 32767, 6.0)
-    press(X)
     combat()
 
     press(MAP)
@@ -110,12 +110,10 @@ def spaceStation():
     press(A)
     time.sleep(LOAD_TIME)
     move(0, -32767, 1.0)
-    press(X)
     combat()
 
     move(-5000, 32767, 6.3)
     move(-32767, 0, 2.1)
-    press(X)
     combat()
 
     move(32767, -17000, 3.0)
@@ -125,7 +123,6 @@ def spaceStation():
     move(-32767, 16000, 1.5)
     move(0, 32767, 1.9)
     move(32767, -18000, 0.5)
-    press(X)
     combat()
 
     press(MAP)
@@ -136,15 +133,17 @@ def spaceStation():
     press(A)
     time.sleep(LOAD_TIME)
     move(9000, -32767, 3.0)
-    press(X)
     combat()
 
     # needs tuning
     move(9000, -32767, 4.4)
     move(-32767, 6500, 8.5)
     move(0, 32767, 3.5)
-    press(X)
     combat()
+
+    ###############
+    # Supply Zone #
+    ###############
 
     press(MAP)
     time.sleep(LOAD_TIME)
@@ -154,7 +153,6 @@ def spaceStation():
     press(A)
     time.sleep(LOAD_TIME)
     move(0, 32767, 4.8)
-    press(X)
     combat()
 
     press(MAP)
@@ -166,7 +164,6 @@ def spaceStation():
     press(A)
     time.sleep(LOAD_TIME)
     move(32767, 5000, 5.5)
-    press(X)
     combat()
 
     press(MAP)
@@ -180,7 +177,6 @@ def spaceStation():
     move(0, 32767, 0.8)
     move(-32767, 0, 5.6)
     move(0, 32767, 3.7)
-    press(X)
     combat()
 
     press(MAP)
@@ -192,7 +188,6 @@ def spaceStation():
     move(-32767, 32767, 10.5)
     move(32767, 32767, 6.7)
     move(32767, -32767, 2.7)
-    press(X)
     combat()
 
     press(MAP)
@@ -201,77 +196,75 @@ def spaceStation():
     press(A)
     time.sleep(LOAD_TIME)
     move(0, 32767, 5.9)
-    press(X)
     combat()
 
 
 def jarilo():
-    # press(MAP)
-    # time.sleep(LOAD_TIME)
-    # press(X)
-    # time.sleep(LOAD_TIME)
-    # move(7000, 20000, 0.2)
-    # press(A)
-    # time.sleep(LOAD_TIME)
-    # press(DOWN)
-    # move(32767, -2000, 0.47)
-    # press(A)
-    # time.sleep(LOAD_TIME)
-    # move(-32767, -24000, 5.5)
-    # press(X)
-    # combat()
+    ########################
+    # Outlying Snow Plains #
+    ########################
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    press(X)
+    time.sleep(LOAD_TIME)
+    move(7000, 20000, 0.2)
+    press(A)
+    time.sleep(LOAD_TIME)
+    press(DOWN)
+    move(32767, -2000, 0.47)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, -24000, 5.5)
+    combat()
 
-    # press(MAP)
-    # time.sleep(LOAD_TIME)
-    # move(-15000, 32767, 0.3)
-    # press(A)
-    # move(-32767, -9000, 8.5)
-    # press(X)
-    # combat()
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-15000, 32767, 0.3)
+    press(A)
+    move(-32767, -9000, 8.5)
+    combat()
 
-    # press(MAP)
-    # time.sleep(LOAD_TIME)
-    # move(0, 32767, 0.3)
-    # press(A)
-    # move(-32767, -10000, 14.2)
-    # press(X)
-    # combat()
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(0, 32767, 0.3)
+    press(A)
+    move(-32767, -10000, 14.2)
+    combat()
 
-    # rework needed
-    # move(32767, -5000, 5.3)
-    # press(X)
-    # combat()
+    rework needed
+    move(32767, -5000, 5.3)
+    combat()
 
-    # press(MAP)
-    # time.sleep(LOAD_TIME)
-    # press(DOWN)
-    # move(10500, 32767, 0.29)
-    # press(A)
-    # time.sleep(LOAD_TIME)
-    # move(0, -32767, 4.5)
-    # press(X)
-    # combat()
+    ##################
+    # Backwater Pass #
+    ##################
 
-    # move(0, -32767, 4.0)
-    # move(32767, -32767, 2.0)
-    # press(X)
-    # combat()
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    press(DOWN)
+    move(10500, 32767, 0.29)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(0, -32767, 4.5)
+    combat()
 
-    # press(MAP)
-    # move(-4000, -32767, 0.45)
-    # press(A)
-    # move(-32767, 3500, 6.4)
-    # press(X)
-    # combat()
+    move(0, -32767, 4.0)
+    move(32767, -32767, 2.0)
+    combat()
 
-    # press(MAP)
-    # time.sleep(LOAD_TIME)
-    # move(-6000, -32767, 0.35)
-    # press(A)
-    # move(0, -32767, 6.0)
-    # move(32767, -32767, 5.0)
-    # press(X)
-    # combat()
+    press(MAP)
+    move(-4000, -32767, 0.45)
+    press(A)
+    move(-32767, 3500, 6.4)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-6000, -32767, 0.35)
+    press(A)
+    move(0, -32767, 6.0)
+    move(32767, -32767, 5.0)
+    combat()
 
     press(MAP)
     time.sleep(LOAD_TIME)
@@ -280,12 +273,298 @@ def jarilo():
     time.sleep(LOAD_TIME)
     move(0, -32767, 5.5)
     move(-32767, 0, 6.4)
+    combat()
+
+    #############################
+    # Corridor of Fading Echoes #
+    #############################
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    press(DOWN)
+    press(DOWN)
+    move(-7000, 32767, 0.2)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, 0, 1.4)
+    move(0, 32767, 2.5)
+    move(-32767, 0, 4.2)
+    move(0, 32767, 5.8)
+    move(32767, 32767, 1.7)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, -12000, 0.25)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, 0, 1.4)
+    move(0, 32767, 2.5)
+    move(-32767, 0, 4.2)
+    move(0, 32767, 5.8)
+    move(32767, 32767, 5.9)
+    move(32767, -32767, 3.0)
+    move(0, -32767, 2.5)
+    move(-32767, -32767, 2.3)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, -2000, 0.1)
+    press(A)
+    move(0, -32767, 1.1)
+    move(-32767, 0, 10.4)
+    move(-32767, 32767, 1.5)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(24000, 32767, 0.33)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, -28000, 7.5)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-11000, -32767, 0.92)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(14000, 32767, 4.7)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(10000, -32767, 0.5)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(0, -32767, 4.9)
+    move(-32767, 0, 3.1)
+    # mob here too
+    move(0, -32767, 6.0)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(20000, -10000, 0.3)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(0, -32767, 4.9)
+    move(-32767, 0, 3.1)
+    move(0, -32767, 8.0)
+    move(32767, 0, 0.3)
+    move(0, -32767, 4.3)
+    move(32767, 0, 6.3)
+    combat()
+
+    ###################
+    # Everwinter Hill #
+    ###################
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    press(DOWN)
+    move(-10000, -10000, 0.2)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, -7500, 6.0)
+    combat()
+
+    move(0, 32767, 2.2)
+    move(32767, 10000, 2.0)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, -25000, 0.5)
+    press(A)
+    press(A)
+    press(A)
+    time.sleep(LOAD_TIME)
+
+    move(0, 32767, 7.0)
+    move(-32767, 0, 8.0)
+    combat()
+
+    # one more mob here to do
+
+    ##############
+    # Great Mine #
+    ##############
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    press(DOWN)
+    press(DOWN)
+    move(0, -32767, 0.5)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, -5000, 8.0)
+    combat()
+
+    move(-32767, -5000, 3.0)
+    combat()
+
+    needs another tuning
+    move(-32767, 0, 2)
+    move(18000, 32767, 3.2)
+    move(32767, 20000, 5.0)
+    move(-10000, 32767, 4.0)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(32767, -32767, 0.1)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, -32767, 3.0)
+    redo this without getting ambushed by roamer
+    move(32767, 0, 3.0)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, -32767, 0.1)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, -32767, 3.0)
+    move(32767, 0, 4.0)
+    move(32767, 32767, 1.4)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, 0, 0.1)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, 0, 6.0)
+    move(32767, 28000, 1.5)
+    combat()
+
+    tuning needed
+    move(-20000, 32767, 3.0)
+    move(32767, 0, 1.0)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, 32767, 0.1)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, 20000, 2.0)
+    move(-32767, -10000, 6.0)
+    combat()
+
+    roamer + redo cuz ambush
+    move(-32767, 3000, 2.0)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(32767, -20000, 0.1)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(-32767, 20000, 2.0)
+    move(-32767, -400, 5.5)
+    move(0, 32767, 4.0)
+    move(32767, 0, 1.4)
+    combat()
+
+    ##############
+    # Rivet Town #
+    ##############
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    press(DOWN)
+    move(4000, 32767, 0.3)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(23000, -32767, 1.9)
+    move(-32767, 0, 7.0)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(32767, 32767, 0.1)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(23000, -32767, 1.9)
+    move(-32767, 0, 7.0)
+    move(0, 32767, 12.5)
+    move(-32767, 3000, 1.8)
+    move(0, 32767, 3.0)
+    combat()
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, 32767, 0.2)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(0, -32767, 1.2)
+    move(32767, 0, 1.8)
+    move(0, -32767, 1.6)
+    move(32767, -32767, 1.2)
+    move(32767, 0, 2.7)
+    move(32767, 32767, 5.5)
+    combat()
+    # to-do roamer pathing
+
+    ####################
+    # Robot Settlement #
+    ####################
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    press(DOWN)
+    move(-32767, -13000, 0.4)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, -32767, 1.5)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, 0, 0.2)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, -15000, 7.0)
+    move(10000, -32767, 1.3)
+    combat()
+
+    press(MAP)
+    time.sleep(LOAD_TIME)
+    move(-32767, -32767, 0.25)
+    press(A)
+    time.sleep(LOAD_TIME)
+    move(32767, -15000, 3.0)
+    move(-7000, -32767, 7.0)
+    move(-10000, -32767, 10.0)
+    move(32767, -24000, 2.0)
+    move(-32767, -24000, 3.7)
+    move(0, -32767, 0.8)
     press(X)
     combat()
 
+    move(0, -32767, 1.2)
+    move(-32767, -28000, 3.0)
+    move(-32767, 0, 1.0)
+    combat()
 
+    move(-32767, 0, 1.6)
+    move(-6000, -32767, 2.2)
+    combat()
+
+
+def xianzhou():
+    #############
+    # Cloudford #
+    #############
+    press(MAP)
+    
 # spaceStation()
 jarilo()
+xianzhou()
 
 
 # # reset gamepad to default state
