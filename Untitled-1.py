@@ -561,9 +561,9 @@ def xianzhou():
     # Cloudford #
     #############
     press(MAP)
-    
+
 # spaceStation()
-jarilo()
+# jarilo()
 xianzhou()
 
 
