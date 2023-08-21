@@ -57,10 +57,10 @@ def combat():
         )
         screenshot = np.array(screenshot)
 
-        cv2.imshow("title", screenshot)
+        cv2.imshow("Combat", screenshot)
 
-        clear = pyautogui.locateOnScreen("menu.png", confidence=0.92)
-        notClear = pyautogui.locateOnScreen("notification.png", confidence=0.852)
+        clear = pyautogui.locateOnScreen("menu2.png", confidence=0.85)
+        notClear = pyautogui.locateOnScreen("notification.png", confidence=0.87)
 
         if cv2.pollKey() != -1 or clear or notClear:
             cv2.destroyAllWindows()
@@ -125,7 +125,7 @@ def spaceStation():
     move(0, -32767, 2.0)
     combat()
 
-    warp(-27777, -27777, 0.1)
+    warp(-22222, -22222, 0.1)
     move(-6500, 32767, 4.6)
     move(-32767, 0, 2.1)
     combat()
@@ -190,7 +190,7 @@ def spaceStation():
     move(0, 32767, 3.7)
     combat()
 
-    warp(9000, 32767, 0.22)
+    warp(9000, 32767, 0.21)
     move(-32767, -32767, 6.7)
     move(-32767, 32767, 10.5)
     move(32767, 32767, 6.7)
@@ -226,10 +226,10 @@ def jarilo():
     combat()
 
     warp(0, 32767, 0.3)
-    move(-32767, -10000, 14.2)
+    move(-32767, -10000, 13.9)
     combat()
 
-    warp(32767, 10000, 0.33)
+    warp(32767, 10000, 0.34)
     move(-32767, -3000, 14.8)
     move(0, 32767, 1.6)
     combat()
@@ -260,7 +260,7 @@ def jarilo():
     move(32767, -32767, 3.8)
     combat()
 
-    warp(-32767, -9000, 0.3)
+    warp(-32767, -9000, 0.25)
     move(0, -32767, 6.0)
     move(32767, -32767, 3.8)
     move(32767, 0, 1.2)
@@ -268,7 +268,7 @@ def jarilo():
     move(32767, 0, 1.2)
     combat()
 
-    warp(-32767, -18000, 0.3)
+    warp(-32767, -18000, 0.25)
     move(0, -32767, 5.5)
     move(-32767, 0, 6.4)
     combat()
@@ -291,7 +291,7 @@ def jarilo():
     move(32767, 32767, 1.7)
     combat()
 
-    warp(-32767, -12000, 0.25)
+    warp(-32767, -12000, 0.25)  # lower humbers for tighter turns
     move(-32767, 0, 1.4)
     move(0, 32767, 2.5)
     move(-32767, 0, 4.2)
@@ -322,10 +322,6 @@ def jarilo():
     combat()
     move(-32767, 0, 1.1)
     combat()
-    move(-32767, 0, 1.1)
-    combat()
-    move(-32767, 0, 1.1)
-    combat()
 
     warp(20000, -10000, 0.25)
     move(0, -32767, 4.9)
@@ -348,10 +344,6 @@ def jarilo():
     move(32767, 32767, 1.0)
     combat()
     move(32767, 32767, 1.0)
-    combat()
-    move(0, 32767, 1.0)
-    combat()
-    move(0, 32767, 1.0)
     combat()
 
     ###################
@@ -391,7 +383,7 @@ def jarilo():
     press(A)
     time.sleep(LOAD_TIME)
     move(0, 32767, 7.0)
-    move(-32767, 0, 8.0)
+    move(-32767, 0, 8.2)
     move(-32767, 4000, 2.0)
     combat()
     move(-32767, 7000, 2.0)
@@ -405,7 +397,7 @@ def jarilo():
     time.sleep(LOAD_TIME)
     press(DOWN)
     press(DOWN)
-    move(0, -32767, 0.5)
+    move(-1000, -32767, 0.505)
     press(A)
     time.sleep(LOAD_TIME)
     move(-32767, -5000, 8.0)
@@ -433,7 +425,7 @@ def jarilo():
 
     warp(-32767, -32767, 0.1)
     move(32767, -32767, 3.0)
-    move(32767, 0, 4.0)
+    move(32767, 0, 3.0)
     move(32767, 32767, 1.1)
     combat()
 
@@ -453,12 +445,12 @@ def jarilo():
 
     warp(-32767, 32767, 0.1)
     move(-32767, 20000, 2.0)
-    move(-32767, -10000, 6.0)
+    move(-32767, -10000, 5.5)
     combat()
 
     warp(10000, 0, 0.2)
     move(-32767, 20000, 2.0)
-    move(-32767, -10000, 6.0)
+    move(-32767, -400, 5.3)
     move(0, 32767, 1.0)
     combat()
     move(0, 32767, 1.0)
@@ -468,7 +460,7 @@ def jarilo():
 
     warp(32767, -20000, 0.1)
     move(-32767, 20000, 2.0)
-    move(-32767, -400, 5.5)
+    move(-32767, -400, 5.3)
     move(0, 32767, 4.0)
     move(32767, 0, 1.4)
     combat()
@@ -533,8 +525,8 @@ def jarilo():
     combat()
 
     warp(-32767, 0, 0.2)
-    move(32767, -15000, 7.0)
-    move(10000, -32767, 1.1)
+    move(32767, -15000, 6.8)
+    move(10000, -32767, 0.7)
     combat()
 
     warp(-32767, -32767, 0.25)
@@ -573,7 +565,7 @@ def xianzhou():
     time.sleep(LOAD_TIME)
     press(X)
     time.sleep(LOAD_TIME)
-    move(32767, -21000, 0.3)  ##
+    move(32767, -20500, 0.31)
     press(A)
     time.sleep(LOAD_TIME)
     press(DOWN)
@@ -605,13 +597,13 @@ def xianzhou():
     move(32767, 0, 1.0)
     combat()
 
-    warp(-32767, -32767, 0.2)
+    warp(-28000, -32767, 0.22)
     move(32767, 0, 1.7)
     move(0, -32767, 5.8)
     move(32767, 0, 1.7)
     move(0, -32767, 10.8)
     move(32767, 0, 2.7)
-    move(0, -32767, 4.0)
+    move(0, -32767, 3.9)
     combat()
 
     warp(-6000, -32767, 0.5)
@@ -619,10 +611,10 @@ def xianzhou():
     move(32767, -15000, 2.0)
     combat()
 
-    warp(7000, -32767, 0.64)
+    warp(6000, -32767, 0.64)
     move(32767, 0, 5.0)
     move(0, -32767, 4.0)
-    move(-32767, -32767, 2.0)
+    move(-32767, -32767, 2.2)
     combat()
 
     warp(22000, -32767, 0.14)
@@ -633,7 +625,7 @@ def xianzhou():
     move(0, -32767, 1.0)
     combat()
 
-    warp(22000, -32767, 0.16)
+    warp(22000, -32767, 0.2)
     move(32767, 0, 5.0)
     move(0, -32767, 6.65)
     move(32767, 0, 3.0)
@@ -674,7 +666,7 @@ def xianzhou():
     move(32767, 0, 1.0)
     combat()
 
-    warp(10000, 32767, 0.195)
+    warp(11000, 32767, 0.207)
     move(32767, 25000, 9.7)
     move(-32767, -6000, 8.5)
     move(-32767, -20000, 2.4)
@@ -694,11 +686,9 @@ def xianzhou():
     warp(-6000, -32767, 0.5)
     move(32767, -6000, 8.4)
     combat()
-    move(0, 32767, 1.0)
+    move(0, 32767, 1.1)
     combat()
-    move(0, 32767, 1.0)
-    combat()
-    move(0, 32767, 1.0)
+    move(0, 32767, 1.1)
     combat()
 
     warp(32767, -2000, 0.2)
@@ -732,7 +722,7 @@ def xianzhou():
     move(0, -32767, 1.0)
     combat()
 
-    warp(32767, 32767, 0.24)
+    warp(32767, 32767, 0.23)
     move(0, 32767, 1.2)
     move(32767, 0, 0.6)
     move(0, -32767, 4.3)
@@ -780,9 +770,11 @@ def xianzhou():
     move(-15000, -32767, 0.88)
     press(A)
     time.sleep(LOAD_TIME)
+    time.sleep(LOAD_TIME)
     move(0, 32767, 4.0)
-    move(-32767, 22000, 3.3)
+    move(-32767, 22000, 3.4)
     combat()
+    move(32767, 32767, 1.0)
     combat()
     combat()
 
@@ -790,7 +782,7 @@ def xianzhou():
     move(0, 32767, 4.0)
     move(-32767, 22000, 3.3)
     move(-32767, 10000, 4.7)
-    move(0, 32767, 5.7)
+    move(0, 32767, 5.6)
     combat()
 
     warp(-32767, -22000, 0.42)
@@ -829,7 +821,7 @@ def xianzhou():
     move(0, -32767, 1.0)
     combat()
 
-    warp(0, 32767, 0.17)
+    warp(0, 32767, 0.2)
     move(0, -32767, 4.1)
     move(32767, -32767, 5.2)
     move(-32767, -32767, 3.5)
@@ -847,7 +839,7 @@ def xianzhou():
     move(32767, 0, 4.0)
     move(32767, 15000, 2.0)
     move(32767, -15000, 2.0)
-    move(32767, 0, 3.9)
+    move(32767, 0, 3.7)
     move(32767, 32767, 4.0)
     move(32767, 0, 1.0)
     combat()
@@ -871,8 +863,8 @@ def xianzhou():
     move(0, -32767, 22.3)
     move(32767, 0, 2.0)
     move(32767, -10000, 6.2)
-    move(-10000, -32767, 3.0)
-    move(0, -32767, 2.8)
+    move(-10000, -32767, 2.8)
+    move(0, -32767, 2.6)
     move(32767, -32767, 2.3)
     combat()
 
@@ -883,15 +875,15 @@ def xianzhou():
     press(MAP)
     time.sleep(LOAD_TIME)
     press(DOWN)
-    move(24500, 32767, 0.37)
+    move(24000, 32767, 0.375)
     press(A)
     time.sleep(LOAD_TIME)
     move(0, 32767, 10.8)
-    move(-32767, 0, 0.8)
+    move(-32767, 0, 0.75)
     move(0, -32767, 0.2)
     combat()
 
-    warp(5000, -32767, 0.2)
+    warp(5500, -32767, 0.22)
     move(0, 32767, 5.2)
     move(32767, 2000, 7.7)
     combat()
@@ -906,14 +898,14 @@ def xianzhou():
     combat()
 
     warp(-32767, -14000, 0.7)
-    move(0, 32767, 6.8)
+    move(0, 32767, 7.2)
     move(32767, 0, 1.0)
     combat()
     move(32767, 0, 1.0)
     combat()
 
     warp(32767, -32767, 0.24)
-    move(0, 32767, 6.8)
+    move(0, 32767, 7.0)
     move(32767, 0, 6.0)
     combat()
 
@@ -944,28 +936,28 @@ def xianzhou():
     combat()
     move(-32767, -32767, 1.0)
     combat()
-    move(-32767, -32767, 1.0)
+    move(-32767, 32767, 1.0)
     combat()
 
     warp(8000, 32767, 0.28)
-    move(-32767, -10000, 8.1)
+    move(-32767, -10000, 8.0)
     move(-32767, 0, 2.5)
     combat()
 
-    warp(-7000, 32767, 0.28)
-    move(-32767, -10000, 8.1)
+    warp(-7500, 32767, 0.28)
+    move(-32767, -10000, 8.0)
     move(-32767, 0, 2.5)
     move(-32767, -32767, 1.5)
     move(-32767, 0, 5.0)
     move(-32767, 32767, 2.1)
     combat()
-    move(32767, 32767, 0.3)
+    move(32767, 32767, 0.4)
     combat()
-    move(-32767, -32767, 0.3)
+    move(-32767, -32767, 0.4)
     combat()
 
     warp(-5000, 32767, 0.47)
-    move(-32767, -10000, 8.1)
+    move(-32767, -10000, 8.0)
     move(-32767, 0, 2.5)
     move(-32767, -32767, 1.5)
     move(-32767, 2000, 5.0)
@@ -977,7 +969,7 @@ def xianzhou():
     combat()
 
     warp(2700, 32767, 1.0)
-    move(-32767, -10000, 8.1)
+    move(-32767, -10000, 8.0)
     move(-32767, 0, 2.5)
     move(-32767, -32767, 1.5)
     move(-32767, 2000, 5.0)
@@ -986,10 +978,10 @@ def xianzhou():
     move(-2000, 32767, 4.0)
     move(-32767, 6000, 4.0)
     move(-32767, 0, 7.8)
-    move(-32767, -32767, 2.5)
+    move(-32767, -32767, 2.2)
     combat()
 
-    warp(32767, 25000, 0.65)
+    warp(30000, 25000, 0.65)
     move(-32767, 0, 1.0)
     move(0, -32767, 0.6)
     move(32767, 0, 1.9)
@@ -999,13 +991,13 @@ def xianzhou():
     move(32767, 0, 0.5)
     combat()
 
-    move(-32767, 32767, 1.2)
+    move(32767, 32767, 1.2)
     combat()
-    move(-32767, -32767, 1.2)
+    move(32767, 32767, 1.2)
     combat()
     move(32767, -32767, 1.2)
     combat()
-    move(32767, 32767, 1.2)
+    move(-32767, 32767, 1.2)
     combat()
 
     warp(3300, 32767, 0.3)
@@ -1014,9 +1006,9 @@ def xianzhou():
     move(32767, 0, 1.9)
     move(0, 32767, 2.0)
     move(32767, 0, 3.1)
-    move(0, -32767, 4.0)
+    move(0, -32767, 3.6)
     move(20000, 32767, 6.8)
-    move(0, 32767, 3.8)
+    move(0, 32767, 3.6)
     move(-32767, 0, 1.2)
     move(-32767, 32767, 1.2)
     combat()
@@ -1030,7 +1022,7 @@ def xianzhou():
     press(DOWN)
     move(-3000, -32767, 0.8)
     press(A)
-    time.sleep(1.0)
+    time.sleep(LOAD_TIME)
     time.sleep(LOAD_TIME)
     move(0, -32767, 5.0)
     move(-32767, -32767, 1.0)
@@ -1038,7 +1030,7 @@ def xianzhou():
     move(-32767, -32767, 1.0)
     combat()
 
-    warp(0, -32767, 0.1)
+    warp(-1500, -32767, 0.22)
     move(0, -32767, 5.0)
     move(-32767, -32767, 8.0)
     combat()
@@ -1108,7 +1100,7 @@ def xianzhou():
     move(-32767, 32767, 1.8)
     move(-32767, 0, 4.6)
     move(0, 32767, 7.0)
-    move(-32767, 32767, 1.7)
+    move(-32767, 32767, 1.5)
     move(-32767, -5000, 1.2)
     combat()
 
@@ -1166,6 +1158,7 @@ def xianzhou():
     move(-32767, 0, 5.7)
     move(-32767, -16000, 3.0)
     move(-32767, 3000, 6.9)
+    move(0, 32767, 1.2)
     combat()
 
     warp(-2000, 32767, 0.3)
@@ -1174,6 +1167,8 @@ def xianzhou():
     move(-32767, 6000, 6.5)
     move(0, 32767, 11.5)
     combat()
+    move(0, 32767, 1.5)
+    combat()
 
     warp(-15000, 32767, 0.3)
     move(-20000, -32767, 2.0)
@@ -1181,7 +1176,7 @@ def xianzhou():
     move(-32767, 0, 16.0)
     combat()
 
-    warp(-2000, 32767, 0.35)
+    warp(-3500, 32767, 0.3)
     move(-20000, -32767, 2.0)
     move(-32767, -13000, 4.5)
     move(-32767, 0, 14.5)
@@ -1192,9 +1187,8 @@ def xianzhou():
     combat()
     combat()
     combat()
-    combat()
 
-    warp(32767, 22000, 0.4)
+    warp(32767, 22000, 0.37)
     move(32767, -32767, 4.0)
     move(2000, -32767, 7.0)
     combat()
@@ -1204,7 +1198,7 @@ def xianzhou():
     move(32767, 0, 21.5)
     combat()
 
-    warp(-5000, -32767, 0.3)
+    warp(-5000, -32767, 0.27)
     move(32767, -32767, 4.0)
     move(32767, 0, 19.8)
     move(0, 32767, 10.0)
@@ -1212,9 +1206,8 @@ def xianzhou():
     move(32767, 0, 4.0)
     combat()
 
-    #####################
-    # Return to Express #
-    #####################
+
+def close():
     press(MAP)
     time.sleep(LOAD_TIME)
     press(UP)
@@ -1228,12 +1221,13 @@ def xianzhou():
     move(-32767, 32767, 0.1)
     press(A)
     time.sleep(LOAD_TIME)
+    gameWindow.close()
 
 
 spaceStation()
 jarilo()
 xianzhou()
-
+close()
 
 # # reset gamepad to default state
 gamepad.reset()
